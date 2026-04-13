@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Security Operations (SOC) 201</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="bg-gradient"></div>
+<div class="floating-shapes">
+<div class="shape shape-1"></div>
+<div class="shape shape-2"></div>
+<div class="shape shape-3"></div>
+</div>
+<header class="glassmorphism-header">
+<nav class="modern-nav">
+<div class="nav-container">
+<button class="nav-scroll-btn left-scroll" id="leftScroll"><i class="fas fa-chevron-left"></i></button>
+<ul class="nav-carousel" id="navCarousel">
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<div class="nav-icon"><span class="nav-number">1</span></div>
+<div class="nav-content">
+<span class="nav-title">Course Introduction</span>
+<span class="nav-subtitle">5 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s2.html">
+<div class="nav-icon"><span class="nav-number">2</span></div>
+<div class="nav-content">
+<span class="nav-title">Lab Setup</span>
+<span class="nav-subtitle">8 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s3.html">
+<div class="nav-icon"><span class="nav-number">3</span></div>
+<div class="nav-content">
+<span class="nav-title">Introduction to Incident Response</span>
+<span class="nav-subtitle">10 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s4.html">
+<div class="nav-icon"><span class="nav-number">4</span></div>
+<div class="nav-content">
+<span class="nav-title">Introduction to Threat Hunting</span>
+<span class="nav-subtitle">13 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s5.html">
+<div class="nav-icon"><span class="nav-number">5</span></div>
+<div class="nav-content">
+<span class="nav-title">Data Transformation</span>
+<span class="nav-subtitle">15 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s6.html">
+<div class="nav-icon"><span class="nav-number">6</span></div>
+<div class="nav-content">
+<span class="nav-title">Understanding Anomalies</span>
+<span class="nav-subtitle">12 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s7.html">
+<div class="nav-icon"><span class="nav-number">7</span></div>
+<div class="nav-content">
+<span class="nav-title">Dissecting Threat Reports</span>
+<span class="nav-subtitle">6 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s8.html">
+<div class="nav-icon"><span class="nav-number">8</span></div>
+<div class="nav-content">
+<span class="nav-title">Threat Hunting Lab</span>
+<span class="nav-subtitle">18 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s9.html">
+<div class="nav-icon"><span class="nav-number">9</span></div>
+<div class="nav-content">
+<span class="nav-title">Collection at Scale</span>
+<span class="nav-subtitle">7 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link" href="s10.html">
+<div class="nav-icon"><span class="nav-number">10</span></div>
+<div class="nav-content">
+<span class="nav-title">PowerShell 101</span>
+<span class="nav-subtitle">10 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s11.html">
+<div class="nav-icon"><span class="nav-number">11</span></div>
+<div class="nav-content">
+<span class="nav-title">PowerShell for Incident Response</span>
+<span class="nav-subtitle">14 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="s12.html">
+<div class="nav-icon"><span class="nav-number">12</span></div>
+<div class="nav-content">
+<span class="nav-title">Conclusion</span>
+<span class="nav-subtitle">1 videos</span>
+</div>
+<div class="nav-indicator"></div>
+</a>
+</li></ul>
+<button class="nav-scroll-btn right-scroll" id="rightScroll"><i class="fas fa-chevron-right"></i></button>
+</div>
+</nav>
+</header>
+<button class="floating-nav left-nav" onclick="navigate('s9.html')"><i class="fas fa-chevron-left"></i></button>
+<button class="floating-nav right-nav" onclick="navigate('s11.html')"><i class="fas fa-chevron-right"></i></button>
+<main class="main-container">
+<div class="content-wrapper">
+<div class="header-content">
+<div class="logo-section">
+<div class="logo-icon"><i class="fas fa-play-circle"></i></div>
+<h1 class="app-title">Security Operations (SOC) 201</h1>
+</div>
+<div class="progress-indicator">
+<div class="progress-bar">
+<div class="progress-fill" style="width: 83.33333333333334%"></div>
+</div>
+<span class="progress-text">10 of 12</span>
+</div>
+</div>
+
+<section class="video-section glassmorphism" data-video-index="0" id="section95">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">1</span></div>
+<div class="video-meta">
+<h2 class="video-title">IntroductiontoPowerShell458 </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/1KEPGoY0NBlEJHLcc6Q5gI95D_s-2cJcX/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section95">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section95">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" disabled="" onclick="navigateToSection('prev', 0)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 0)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-95" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-95" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-95" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="95" id="notes95" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section>
+<section class="video-section glassmorphism" data-video-index="1" id="section96">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">2</span></div>
+<div class="video-meta">
+<h2 class="video-title">PowerShell101155 </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/1F9OVU6bBk-1lJJPgEvahL626uTyeqmBS/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section96">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section96">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" onclick="navigateToSection('prev', 1)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 1)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-96" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-96" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-96" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="96" id="notes96" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section>
+<section class="video-section glassmorphism" data-video-index="2" id="section97">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">3</span></div>
+<div class="video-meta">
+<h2 class="video-title">PowerShell101Cmdlets609 </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/1a70ZDEfeV6Qrejw3e3I6seHzADuL_m_k/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section97">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section97">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" onclick="navigateToSection('prev', 2)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 2)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-97" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-97" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-97" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="97" id="notes97" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section>
+<section class="video-section glassmorphism" data-video-index="3" id="section98">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">4</span></div>
+<div class="video-meta">
+<h2 class="video-title">PowerShell101Aliases645 </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/14v9AwEkVKqC5wpkpek19MikuHV9FYXMJ/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section98">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section98">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" onclick="navigateToSection('prev', 3)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 3)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-98" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-98" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-98" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="98" id="notes98" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section>
+<section class="video-section glassmorphism" data-video-index="4" id="section99">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">5</span></div>
+<div class="video-meta">
+<h2 class="video-title">PowerShell101ObjectsandthePipeline908 </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/1uC0Ahdf1uHZM1JcMhgJGIkuoprW9N4kW/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section99">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section99">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" onclick="navigateToSection('prev', 4)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 4)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-99" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-99" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-99" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="99" id="notes99" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section>
+<section class="video-section glassmorphism" data-video-index="5" id="section100">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">6</span></div>
+<div class="video-meta">
+<h2 class="video-title">PowerShell101SelectingSortingandFormatting1735 </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/1f90_xJYQURerdpfZgVRHp_7Z7PlYS4qK/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section100">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section100">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" onclick="navigateToSection('prev', 5)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 5)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-100" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-100" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-100" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="100" id="notes100" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section>
+<section class="video-section glassmorphism" data-video-index="6" id="section101">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">7</span></div>
+<div class="video-meta">
+<h2 class="video-title">PowerShell 101 Providers </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/1E6dv03Mkwf1zfL4cxnYUdj1kzCX_P2TG/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section101">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section101">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" onclick="navigateToSection('prev', 6)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 6)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-101" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-101" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-101" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="101" id="notes101" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section>
+<section class="video-section glassmorphism" data-video-index="7" id="section102">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">8</span></div>
+<div class="video-meta">
+<h2 class="video-title">PowerShell 101 Variables and Data Types </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/1MBjhwqCO8di76qeNBCjK5_OsBwxrzize/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section102">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section102">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" onclick="navigateToSection('prev', 7)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 7)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-102" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-102" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-102" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="102" id="notes102" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section>
+<section class="video-section glassmorphism" data-video-index="8" id="section103">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">9</span></div>
+<div class="video-meta">
+<h2 class="video-title">PowerShell 101 Control Flow </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/1ILRQCEfrdIqZfBc2esAVi6kpI6JNSdSs/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section103">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section103">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" onclick="navigateToSection('prev', 8)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 8)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-103" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-103" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-103" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="103" id="notes103" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section>
+<section class="video-section glassmorphism" data-video-index="9" id="section104">
+<div class="section-header">
+<div class="video-info">
+<div class="video-badge"><span class="badge-number">10</span></div>
+<div class="video-meta">
+<h2 class="video-title">Working with WMI and CIM </h2>
+<div class="video-status">
+<span class="status-dot"></span>
+<span class="status-text">Ready to watch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="video-container modern-player">
+<iframe allow="autoplay; fullscreen" allowfullscreen="" class="video-iframe" loading="lazy" src="https://drive.google.com/file/d/1lWDyL_Kz8xxXMsH8oOxgoJuueDBCoCDF/preview"></iframe>
+</div>
+<div class="section-actions">
+<div class="action-group completion-group">
+<button class="action-btn complete-btn" data-section="section104">
+<div class="btn-content"><i class="fas fa-check-circle"></i><span>Mark Complete</span></div>
+</button>
+<button class="action-btn unmark-btn" data-section="section104">
+<div class="btn-content"><i class="fas fa-times-circle"></i><span>Unmark</span></div>
+</button>
+</div>
+<div class="action-group navigation-group">
+<button class="action-btn nav-btn prev-btn" onclick="navigateToSection('prev', 9)">
+<div class="btn-content"><i class="fas fa-chevron-left"></i><span>Previous</span></div>
+</button>
+<button class="action-btn nav-btn next-btn" onclick="navigateToSection('next', 9)">
+<div class="btn-content"><span>Next</span><i class="fas fa-chevron-right"></i></div>
+</button>
+</div>
+</div>
+<div class="notes-container">
+<div class="notes-header">
+<div class="notes-title"><i class="fas fa-sticky-note"></i><span>Your Notes</span></div>
+<div class="notes-tools">
+<button class="tool-btn" id="bold-104" title="Bold"><i class="fas fa-bold"></i></button>
+<button class="tool-btn" id="italic-104" title="Italic"><i class="fas fa-italic"></i></button>
+<button class="tool-btn" id="clear-104" title="Clear Notes"><i class="fas fa-trash"></i></button>
+</div>
+</div>
+<div class="notes-input-container">
+<textarea class="notes-input" data-video-id="104" id="notes104" placeholder="Write your notes..."></textarea>
+<div class="notes-counter"><span class="char-count">0</span><span class="char-limit">/ 5000</span></div>
+</div>
+</div>
+</section></div>
+</main>
+<div class="fab-container">
+<div class="fab-menu">
+<button class="fab main-fab" id="mainFab"><i class="fas fa-plus"></i></button>
+<div class="fab-options">
+<button class="fab option-fab" id="exportButton" title="Export Progress"><i class="fas fa-download"></i></button>
+<button class="fab option-fab" id="importDataButton" title="Import Progress"><i class="fas fa-upload"></i></button>
+<button class="fab option-fab home-fab" onclick="window.location.href='https://brahimsaa.github.io/all';" title="Home"><i class="fas fa-home"></i></button>
+</div>
+</div>
+</div>
+<input accept=".json" id="importButton" style="display: none;" type="file"/>
+<div class="loading-overlay" id="loadingOverlay">
+<div class="loading-spinner">
+<div class="spinner"></div>
+<p>Loading content...</p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
